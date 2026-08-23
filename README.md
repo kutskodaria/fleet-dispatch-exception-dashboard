@@ -4,7 +4,7 @@
 A dynamic operational BI dashboard built for Fleet Dispatchers to manage international truck movements across the EU-CIS corridor by exception. Shifting away from passive history tracking, this project acts as a live control shield that filters out normal operations and highlights only active transit crises requiring immediate logistics intervention.
 
 <p align="center">
-  <img src="./02_dispatch_control_shield.png" width="700">
+  <img src="./02_dispatch_control_shield.png" width="800">
 </p>
 
 [Download Fleet_Dispatch_Control_Shield (.pbix)](./Fleet_Dispatch_Control_Shield.pbix)
@@ -37,7 +37,7 @@ A single dispatcher often monitors 30+ trucks simultaneously, making manual indi
 Динамичный операционный BI-дашборд для диспетчеров автопарка, предназначенный для управления международными перевозками по коридору ЕС–СНГ по принципу «исключений». В отличие от пассивного отслеживания истории, этот проект действует как живой щит, который отсеивает штатные операции и подсвечивает только активные кризисные ситуации, требующие немедленного вмешательства логистов.
 
 <p align="center">
-  <img src="./02_dispatch_control_shield.png" width="700">
+  <img src="./02_dispatch_control_shield.png" width="800">
 </p>
 
 [Скачать Fleet_Dispatch_Control_Shield (.pbix)](./Fleet_Dispatch_Control_Shield.pbix)
