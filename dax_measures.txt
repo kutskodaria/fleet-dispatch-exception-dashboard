@@ -1,0 +1,9 @@
+Total_Active_Incidents = 
+CALCULATE(
+    COUNT(vehicle_positions[position_id]),
+    vehicle_positions[current_status] <> "В пути"
+)
+
+Total_Fleet_Downtime_Mins = SUM(vehicle_positions[stop_duration_mins])
+
+Max_Route_Deviation_Km = MAX(vehicle_positions[deviation_km])
