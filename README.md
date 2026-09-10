@@ -28,6 +28,17 @@ A single dispatcher often monitors 30+ trucks simultaneously, making manual indi
 * **Geographical BI Visualization:** Power BI maps coordinate points dynamically, color-coding markers by live urgency (Green = OK, Yellow = Delayed at Customs, Red = Off-Route/Lost).
 * **Security & Ownership Filters:** Built-in regional filtering allows a dispatcher (e.g., East Region vs. West Region) to view only the trucks under their direct operational command.
 
+  ## 🗄️ SQL Scripts and  DAX Measures
+
+All SQL scripts for creating and populating the fleet monitoring database are in the [`sql/`](./sql) folder:
+
+| File | Description |
+|------|-------------|
+| [`01_.create_tables.sql`](./sql/01_.create_tables.sql) | Creates `active_fleet` and `vehicle_positions` tables |
+| [`02_.insert_data.sql`](./sql/02_.insert_data.sql) | Inserts sample fleet data with different statuses |
+
+DAX measures used in the Power BI dashboard are in [`dax_measures.txt`](./dax_measures.txt):
+
 ---
 ---
 
@@ -49,7 +60,7 @@ A single dispatcher often monitors 30+ trucks simultaneously, making manual indi
 Один диспетчер часто отслеживает одновременно 30+ машин, что делает ручную проверку каждого транспортного средства крайне неэффективной. Этот проект применяет строгую логику для выделения только трёх типов инцидентов высокого приоритета:
 1. **Критическая остановка (`stopped`):** Обнаруживает транспортные средства, стоящие на таможне или в транзитных зонах более 30 минут, с точным расчётом времени задержки.
 2. **Отклонение от маршрута (`off_route`):** Мгновенное оповещение, если машина отклонилась более чем на 5 км от запланированного пути.
-3. **Нормальный статус (`en_route`):** Скрывается из срочных оповещений, чтобы позволить диспетчеру сосредоточить 100% внимания на восстановлении работы флота.
+3. **Нормальный статус (`en_route`):** Скрывается из срочных оповещений, чтобы позволить диспетчеру сосредоточить 100% внимания на восстановлении работы автопарка.
 
 ## Техническая структура
 
@@ -60,3 +71,14 @@ A single dispatcher often monitors 30+ trucks simultaneously, making manual indi
 * **Бэкенд телеметрии:** Симулирует активные потоки GPS через таблицу MySQL `vehicle_positions`, фиксируя точную широту, долготу, таймеры остановок и теги региональной принадлежности диспетчеров.
 * **Географическая BI-визуализация:** Power BI динамически отображает координаты на карте, кодируя маркеры цветом в зависимости от срочности (Зелёный = OK, Жёлтый = Задержка на таможне, Красный = Сход с маршрута/Потеря).
 * **Фильтры безопасности:** Встроенная региональная фильтрация позволяет диспетчеру (например, Восточный регион vs. Западный регион) видеть только машины под его прямым управлением.
+
+  ## 🗄️ SQL-скрипты и DAX-меры
+
+Все SQL-скрипты для создания и заполнения базы данных мониторинга автопарка находятся в папке [`sql/`](./sql):
+
+| Файл | Описание |
+|------|----------|
+| [`01_.create_tables.sql`](./sql/01_.create_tables.sql) | Создание таблиц `active_fleet` и `vehicle_positions` |
+| [`02_.insert_data.sql`](./sql/02_.insert_data.sql) | Вставка тестовых данных с разными статусами |
+
+DAX-меры, использованные в дашборде Power BI, находятся в файле [`dax_measures.txt`](./dax_measures.txt):
